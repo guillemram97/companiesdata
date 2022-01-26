@@ -1,10 +1,4 @@
 
-fairseq-train $DATA_DIR --encoder-normalize-before --decoder-normalize-before --arch mbart_large --layernorm-embedding --task translation_from_pretrained_bart --source-lang tr_TR --target-lang en_XX --criterion cross_entropy --optimizer adam --adam-eps 1e-06 --adam-betas '(0.9, 0.98)' --lr-scheduler polynomial_decay --lr 3e-05 --dropout 0.3 --attention-dropout 0.1 --weight-decay 0.0 --warmup-updates 2500 --total-num-update 80000 --max-tokens $token_size  --update-freq 8 --langs $langs --no-epoch-checkpoints  --patience 5 --save-dir $SAVE_DIR --fp16 --restore-file $SAVE_DIR/checkpoint_best.pt
-```
-
-
-
-
 
 ```
 PRETRAIN=ckpts/tr-en/synthetic/edi/checkpoint_best.pt
