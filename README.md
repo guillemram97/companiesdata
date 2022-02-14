@@ -1,22 +1,4 @@
-
-
-```
-PRETRAIN=ckpts/tr-en/synthetic/edi/checkpoint_best.pt
-DATA_DIR=data/bin/
-SAVE_DIR=/guillem/prova
-langs=ar_AR,cs_CZ,de_DE,en_XX,es_XX,et_EE,fi_FI,fr_XX,gu_IN,hi_IN,it_IT,ja_XX,kk_KZ,ko_KR,lt_LT,lv_LV,my_MM,ne_NP,nl_XX,ro_RO,ru_RU,si_LK,tr_TR,vi_VN,zh_CN
-
-token_size=1024
-
-fairseq-train $DATA_DIR --encoder-normalize-before --decoder-normalize-before --arch mbart_large --layernorm-embedding --task translation_from_pretrained_bart --source-lang tr_TR --target-lang en_XX --criterion cross_entropy --optimizer adam --adam-eps 1e-06 --adam-betas '(0.9, 0.98)' --lr-scheduler polynomial_decay --lr 3e-05 --dropout 0.3 --attention-dropout 0.1 --weight-decay 0.0 --warmup-updates 2500 --total-num-update 80000 --max-tokens $token_size  --update-freq 8 --langs $langs --no-epoch-checkpoints  --patience 5 --save-dir $SAVE_DIR --fp16 --restore-file $SAVE_DIR/checkpoint_best.pt
-```
-
-
-
-
-Note that we did not use label-smoothing and use a few hparams different than the example. You can easily change this what works best for you. See the [fairseq documentation](https://fairseq.readthedocs.io/en/latest/command_line_tools.html). 
-
-For finetuning, you might want to start with the already trained model which is available under `ckpts/tr-en/synthetic/edi/checkpoint_best.pt`. 
+# Mapping Companies House: Empirical Evidence for the Continuing Need to ‘Think Small First’ in the UK
 
 
 **en-tr**  
