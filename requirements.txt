@@ -1,0 +1,6 @@
+geopandas
+tqdm
+pandas
+math
+numpy
+matplotlib
