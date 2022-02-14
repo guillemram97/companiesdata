@@ -8,6 +8,8 @@ Run ``` python create_uk_map.py ```. It takes data of a [grid of the UK](https:/
 ### Postcode map
 First you need to download the dataset [ukpostcodes.csv](https://www.freemaptools.com/download-uk-postcode-lat-lng.htm). Then run ``` python create_postcode.py ```.
 
+## Column analysis and temporal plots
+Use the Jupyter notebook called ```company_data.ipynb```.
 
 
 
